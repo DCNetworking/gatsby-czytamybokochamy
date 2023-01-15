@@ -37,5 +37,11 @@ module.exports = {
         icon: "src/favicon.png",
       },
     },
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        contentTypeFilter: contentType => !contentType.sys.id.startsWith('page'),
+      },
+    },
   ],
 }
