@@ -16,6 +16,7 @@ module.exports = {
       resolve: "gatsby-source-contentful",
       options: {
         downloadLocal: true,
+        contentTypeFilter: contentType => !contentType.sys.id.startsWith('page'),
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         host: process.env.CONTENTFUL_HOST,
@@ -35,12 +36,6 @@ module.exports = {
         background_color: "#ffe491",
         theme_color: "#004ca3",
         icon: "src/favicon.png",
-      },
-    },
-    {
-      resolve: "gatsby-source-contentful",
-      options: {
-        contentTypeFilter: contentType => !contentType.sys.id.startsWith('page'),
       },
     },
   ],
