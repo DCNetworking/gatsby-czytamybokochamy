@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <Layout>
             <section className={styles.home}>
-                <h1 className={styles.header}>Hello</h1>
+                <img className={styles.image} src='/test_picture.jpg' alt='main_menu_picture' />
             </section>
         </Layout>
     );

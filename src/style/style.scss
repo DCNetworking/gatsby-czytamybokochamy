@@ -1,20 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 $main-bg_color : #fff;
 $nav_bar-bg_color: #f0f0f0;
 $footer-bg_color: #1f1f1f;
 $main-font_color : rgb(40, 40, 40);
 $nav_bar-font_color: #020202;
 $footer-font_color: #f8f8f8;
+$logo-font_color: #791d4b;
 
 body{
     padding:0;
     margin: 0 0;
+    font-family: 'Lato', sans-serif;
 }
 .layout{
     width:100vw;
     height:100vh;
     display: grid;
     place-content: space-between;
-    grid-template-rows: 5% 90% 5%;
+    grid-template-rows: 90% 5%;
     grid-template-columns: 1fr;
 }
 .content{
@@ -23,13 +26,31 @@ body{
 }
 .czytamy_bo_kochamy-navbar{
     display: flex;
-    gap:4rem;
+    position: fixed;
+    width: 100vw;
+    height: 5rem;
     align-items: center;
-    justify-content: center;
     background-color: $nav_bar-bg_color;
     color: $nav_bar-font_color;
     color:white;
     text-decoration: none;
+    .czytamy_bo_kochamy-nav_items{
+        display: flex;
+        width:80%;
+        align-items: center;
+        justify-content: center;
+        gap:4rem;
+    }
+    .czytamy_bo_kochamy-logo{
+        margin-left: 1rem;
+        color:$logo-font_color;
+    }
+    a{
+        font-size: 1.5rem;
+        text-decoration: none;
+        color:$nav_bar-font_color;
+
+    }
 }
 
 .czytamy_bo_kochamy-footer{
