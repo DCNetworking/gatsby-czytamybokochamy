@@ -1,0 +1,41 @@
+$main-bg_color : #fff;
+$nav_bar-bg_color: #f0f0f0;
+$footer-bg_color: #1f1f1f;
+$main-font_color : rgb(40, 40, 40);
+$nav_bar-font_color: #020202;
+$footer-font_color: #f8f8f8;
+
+body{
+    padding:0;
+    margin: 0 0;
+}
+.layout{
+    width:100vw;
+    height:100vh;
+    display: grid;
+    place-content: space-between;
+    grid-template-rows: 5% 90% 5%;
+    grid-template-columns: 1fr;
+}
+.content{
+    color: $main-font_color;
+    background-color: $main-bg_color;
+}
+.czytamy_bo_kochamy-navbar{
+    display: flex;
+    gap:4rem;
+    align-items: center;
+    justify-content: center;
+    background-color: $nav_bar-bg_color;
+    color: $nav_bar-font_color;
+    color:white;
+    text-decoration: none;
+}
+
+.czytamy_bo_kochamy-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $footer-font_color;
+    background-color: $footer-bg_color;
+}

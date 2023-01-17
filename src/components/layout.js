@@ -1,15 +1,19 @@
-import * as React from "react"
-import "../styles.css"
-import { Slice } from "gatsby"
+import React from 'react';
+import NavBar from './NavBar';
+import '../style/style.scss';
 
-const Layout = ({ children }) => {
-  return (
-    <>
-      <Slice alias="header" />
-      {children}
-      <Slice alias="footer" />
-    </>
-  )
+const Layout = (props) => {
+    return (
+        <div className='layout'>
+            <NavBar />
+            <div className='content'>
+                {props.children}
+            </div>
+            <footer className='czytamy_bo_kochamy-footer'>
+                <p>CopyRight 2023 DCNetowrking</p>
+            </footer>
+        </div>
+    );
 }
 
-export default Layout
+export default Layout;
